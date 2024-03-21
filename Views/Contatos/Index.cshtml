@@ -1,0 +1,124 @@
+﻿@{
+}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+    .contact-list {
+        margin-top: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+        .contact-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-list li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+</style>
+<body>
+    <header>
+        <h1>Entre em Contato</h1>
+    </header>
+    <div class="container">
+        <p>Tem alguma pergunta ou deseja agendar um horário? Entre em contato conosco preenchendo o formulário abaixo:</p>
+        <form action="processar_contato.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+        <div class="contact-list">
+            <h2>Lista de Contatos</h2>
+            <ul>
+                <li>
+                    <strong>Nome:</strong> João Silva<br>
+                    <strong>E-mail:</strong> joao@example.com<br>
+                    <strong>Telefone:</strong> (11) 3456-7890<br>
+                    <strong>Mensagem:</strong> Agendamento de corte de cabelo
+                </li>
+                <li>
+                    <strong>Nome:</strong> Maria Oliveira<br>
+                    <strong>E-mail:</strong> maria@example.com<br>
+                    <strong>Telefone:</strong> (11) 9876-5432<br>
+                    <strong>Mensagem:</strong> Agendamento de barba
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
